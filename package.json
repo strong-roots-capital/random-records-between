@@ -1,6 +1,6 @@
 {
   "name": "random-records-between",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Create a list of random records spanning given dates",
   "main": "dist/random-records-between.js",
   "types": "dist/random-records-between.d.ts",
