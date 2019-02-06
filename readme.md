@@ -12,13 +12,14 @@ npm install random-records-between
 
 ``` typescript
 import randomRecordsBetween from 'random-records-between'
-// TODO: describe usage
+
+import Record from 'timeseries-record'
+
+const records: Record[] = randomRecordsBetween(new Date(), new Date())
+// records.length == 1
 ```
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [timeseries-record](https://github.com/strong-roots-capital/timeseries-record)
+- [random-record](https://github.com/strong-roots-capital/random-record)

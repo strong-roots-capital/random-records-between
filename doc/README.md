@@ -16,18 +16,18 @@ Use
 
 ```typescript
 import randomRecordsBetween from 'random-records-between'
-// TODO: describe usage
+
+import Record from 'timeseries-record'
+
+const records: Record[] = randomRecordsBetween(new Date(), new Date())
+// records.length == 1
 ```
 
 Related
 -------
 
-TODO
-
-Acknowledgments
----------------
-
-TODO
+*   [timeseries-record](https://github.com/strong-roots-capital/timeseries-record)
+*   [random-record](https://github.com/strong-roots-capital/random-record)
 
 ## Index
 
@@ -45,7 +45,7 @@ TODO
 
 ▸ **randomRecordsBetween**(start: *`Date`*, end: *`Date`*): `Record`[]
 
-*Defined in [random-records-between.ts:17](https://github.com/strong-roots-capital/random-records-between/blob/250997b/src/random-records-between.ts#L17)*
+*Defined in [random-records-between.ts:17](https://github.com/strong-roots-capital/random-records-between/blob/b0a8897/src/random-records-between.ts#L17)*
 
 Return an array of random timeseries data between specified start and end dates, inclusive.
 
