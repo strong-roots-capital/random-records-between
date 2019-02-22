@@ -3,11 +3,10 @@
  * Create a list of random records spanning given dates
  */
 
-const datesBetween = require('dates-between')
-
 import ow from 'ow'
 import Record from 'timeseries-record'
 import randomRecord from 'random-record'
+import moment from 'moment'
 
 
 /**
@@ -18,16 +17,19 @@ export default function randomRecordsBetween(start: Date, end: Date): Record[] {
     ow(start, ow.date.is(d => d.getTime() <= end.getTime() || `Expected \`start\` (${d}) to be before-or-equal to \`end\` (${end})`))
 
     let records: Record[] = []
-    for (const date of datesBetween(start, end)) {
+    const current = moment.utc(start)
+
+    while (current.isSameOrBefore(end)) {
         const rec = randomRecord()
         records.push({
-            Time: date.getTime(),
+            Time: current.valueOf(),
             Open: rec.Open,
             High: rec.High,
             Low: rec.Low,
             Close: rec.Close,
             Volume: rec.Volume
         })
+        current.add(1, 'day')
     }
 
     return records

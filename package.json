@@ -7,7 +7,9 @@
   "scripts": {
     "install": "tsc",
     "ava": "ava -s -v",
+    "ava:fail-fast": "ava -s -v --fail-fast",
     "watch:ava": "nodemon -e 'ts json' -x 'npm run ava || true'",
+    "watch:ava:fail-fast": "nodemon -e 'ts json' -x 'npm run ava:fail-fast || true'",
     "test": "nyc ava",
     "test:tap": "nyc ava --tap | tap-nyc",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
@@ -39,7 +41,6 @@
   "homepage": "https://github.com/strong-roots-capital/random-records-between",
   "dependencies": {
     "@types/node": "^10.12.18",
-    "dates-between": "^1.1.0",
     "ow": "^0.12.0",
     "random-record": "^2.0.2",
     "timeseries-record": "^1.0.0",
