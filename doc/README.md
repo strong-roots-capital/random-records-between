@@ -45,7 +45,7 @@ Related
 
 ▸ **randomRecordsBetween**(start: *`Date`*, end: *`Date`*): `Record`[]
 
-*Defined in [random-records-between.ts:17](https://github.com/strong-roots-capital/random-records-between/blob/e40569c/src/random-records-between.ts#L17)*
+*Defined in [random-records-between.ts:16](https://github.com/strong-roots-capital/random-records-between/blob/0462ed8/src/random-records-between.ts#L16)*
 
 Return an array of random timeseries data between specified start and end dates, inclusive.
 
